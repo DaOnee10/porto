@@ -30,6 +30,11 @@
             >
           </li>
           <li>
+            <a href="#keahlian" class="transition hover:text-brand-600"
+              >Keahlian</a
+            >
+          </li>
+          <li>
             <a href="#proyek" class="transition hover:text-brand-600">Proyek</a>
           </li>
           <li>
@@ -72,6 +77,13 @@
               href="#tentang"
               class="block rounded-lg px-3 py-2 hover:bg-slate-100"
               >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="#keahlian"
+              class="block rounded-lg px-3 py-2 hover:bg-slate-100"
+              >Keahlian</a
             >
           </li>
           <li>
@@ -127,9 +139,148 @@
         </div>
       </section>
 
-      <section id="tentang"><!-- Tentang --></section>
+      <section id="tentang" class="border-y border-slate-200 bg-slate-50">
+        <div
+          class="mx-auto grid max-w-5xl items-center gap-12 px-6 py-20 md:grid-cols-5 md:py-28"
+        >
+          <!-- Foto (rasio 3:4) -->
+          <div class="md:col-span-2">
+            <div
+              class="mx-auto aspect-3/4 w-full max-w-xs overflow-hidden rounded-2xl bg-slate-200 md:mx-0"
+            >
+              <img
+                src="/src/assets/images/charles-portrait.webp"
+                alt="Foto [Nama Kamu]"
+                class="h-full w-full object-cover"
+                width="800"
+                height="1067"
+              />
+            </div>
+          </div>
 
-      <section id="proyek"><!-- Proyek --></section>
+          <!-- Teks -->
+          <div class="md:col-span-3">
+            <p
+              class="text-sm font-semibold uppercase tracking-widest text-brand-600"
+            >
+              Tentang
+            </p>
+            <h2
+              class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl"
+            >
+              Mengenal saya lebih dekat
+            </h2>
+
+            <div class="mt-6 space-y-4 leading-relaxed text-slate-600">
+              <p>
+                [Siapa kamu: peran, latar belakang singkat, dan di mana kamu
+                bekerja.]
+              </p>
+              <p>
+                [Apa yang kamu bangun dan masalah apa yang biasanya kamu
+                selesaikan.]
+              </p>
+              <p>
+                [Apa yang sedang kamu cari: kesempatan kerja, magang, atau
+                proyek freelance.]
+              </p>
+            </div>
+
+            <dl
+              class="mt-8 grid grid-cols-2 gap-6 border-t border-slate-200 pt-8"
+            >
+              <div>
+                <dt class="text-sm text-slate-500">Lokasi</dt>
+                <dd class="mt-1 font-semibold text-slate-900">Kupang, NTT</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-slate-500">Fokus</dt>
+                <dd class="mt-1 font-semibold text-slate-900">
+                  Web Development
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="keahlian" class="mx-auto max-w-5xl px-6 py-20 md:py-28">
+        <p
+          class="text-sm font-semibold uppercase tracking-widest text-brand-600"
+        >
+          Keahlian
+        </p>
+        <h2
+          class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl"
+        >
+          Teknologi yang saya gunakan
+        </h2>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Frontend</h3>
+            <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                HTML
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                CSS
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                JavaScript
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                Tailwind CSS
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Backend &amp; Database</h3>
+            <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                PHP
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                MySQL
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Tools</h3>
+            <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                Git &amp; GitHub
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                VS Code
+              </li>
+              <li
+                class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700"
+              >
+                Vite
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section id="kontak"><!-- Kontak --></section>
     </main>
