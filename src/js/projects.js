@@ -63,7 +63,7 @@ const projects = [
 
 const grid = document.querySelector('#project-grid')
 
-const renderCard = (p) => {
+const renderCard = (p, i) => {
     const media = p.image
         ? `<img src="${p.image}" alt="Tampilan ${p.title}" loading="lazy"
             class="aspect-video w-full object-cover" />`
@@ -90,16 +90,18 @@ const renderCard = (p) => {
         .join('')
 
     return `
-    <article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
-      ${media}
-      <div class="flex flex-1 flex-col p-5">
-        <p class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">${p.category}</p>
-        <h3 class="mt-2 font-semibold leading-snug text-slate-900 dark:text-white">${p.title}</h3>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">${p.description}</p>
-        <ul class="mt-4 flex flex-wrap gap-2 text-xs">${tags}</ul>
-        <div class="mt-auto flex gap-4 pt-5 text-sm font-semibold">${links}</div>
-      </div>
-    </article>`
+    <div data-reveal class="h-full" style="--reveal-delay: ${(i % 3) * 100}ms">
+      <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
+        ${media}
+        <div class="flex flex-1 flex-col p-5">
+          <p class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">${p.category}</p>
+          <h3 class="mt-2 font-semibold leading-snug text-slate-900 dark:text-white">${p.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">${p.description}</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-xs">${tags}</ul>
+          <div class="mt-auto flex gap-4 pt-5 text-sm font-semibold">${links}</div>
+        </div>
+      </article>
+    </div>`
 }
 
 grid.innerHTML = projects.map(renderCard).join('')
