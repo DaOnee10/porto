@@ -67,35 +67,35 @@ const renderCard = (p) => {
     const media = p.image
         ? `<img src="${p.image}" alt="Tampilan ${p.title}" loading="lazy"
             class="aspect-video w-full object-cover" />`
-        : `<div class="flex aspect-video items-center justify-center bg-slate-100 text-sm text-slate-400">
+        : `<div class="flex aspect-video items-center justify-center bg-slate-100 dark:bg-slate-800 text-sm text-slate-400">
          Screenshot
        </div>`
 
     const tags = p.tags
         .map(
             (t) =>
-                `<li class="rounded-full bg-brand-50 px-3 py-1 font-medium text-brand-700">${t}</li>`
+                `<li class="rounded-full bg-brand-50 dark:bg-brand-500/15 px-3 py-1 font-medium text-brand-700 dark:text-brand-100">${t}</li>`
         )
         .join('')
 
     const links = [
         p.demo &&
         `<a href="${p.demo}" target="_blank" rel="noopener noreferrer"
-          class="text-brand-600 hover:text-brand-700">Demo ↗</a>`,
+          class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-100">Demo ↗</a>`,
         p.repo &&
         `<a href="${p.repo}" target="_blank" rel="noopener noreferrer"
-          class="text-brand-600 hover:text-brand-700">Kode ↗</a>`,
+          class="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-100">Kode ↗</a>`,
     ]
         .filter(Boolean)
         .join('')
 
     return `
-    <article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+    <article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
       ${media}
       <div class="flex flex-1 flex-col p-5">
-        <p class="text-xs font-semibold uppercase tracking-wider text-brand-600">${p.category}</p>
-        <h3 class="mt-2 font-semibold leading-snug text-slate-900">${p.title}</h3>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600">${p.description}</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">${p.category}</p>
+        <h3 class="mt-2 font-semibold leading-snug text-slate-900 dark:text-white">${p.title}</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">${p.description}</p>
         <ul class="mt-4 flex flex-wrap gap-2 text-xs">${tags}</ul>
         <div class="mt-auto flex gap-4 pt-5 text-sm font-semibold">${links}</div>
       </div>
