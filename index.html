@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nama Kamu | Web Developer</title>
+    <meta
+      name="description"
+      content="Portofolio web developer: sistem informasi dan aplikasi web."
+    />
+  </head>
+  <body class="bg-white font-sans text-slate-800 antialiased">
+    <header
+      class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
+      >
+        <a href="#beranda" class="text-lg font-bold text-slate-900"
+          >Nama<span class="text-brand-600">.</span></a
+        >
+
+        <!-- Menu desktop -->
+        <ul
+          class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex"
+        >
+          <li>
+            <a href="#tentang" class="transition hover:text-brand-600"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a href="#proyek" class="transition hover:text-brand-600">Proyek</a>
+          </li>
+          <li>
+            <a
+              href="#kontak"
+              class="rounded-lg bg-brand-600 px-4 py-2 text-white transition hover:bg-brand-700"
+              >Hubungi Saya</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tombol hamburger (mobile) -->
+        <button
+          id="menu-btn"
+          class="rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="size-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Menu mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-slate-200 bg-white md:hidden"
+      >
+        <ul class="space-y-1 px-6 py-4 text-sm font-medium">
+          <li>
+            <a
+              href="#tentang"
+              class="block rounded-lg px-3 py-2 hover:bg-slate-100"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="#proyek"
+              class="block rounded-lg px-3 py-2 hover:bg-slate-100"
+              >Proyek</a
+            >
+          </li>
+          <li>
+            <a
+              href="#kontak"
+              class="block rounded-lg px-3 py-2 hover:bg-slate-100"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="beranda" class="mx-auto max-w-5xl px-6 py-20 md:py-32">
+        <p
+          class="text-sm font-semibold uppercase tracking-widest text-brand-600"
+        >
+          Web Developer
+        </p>
+
+        <h1
+          class="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl"
+        >
+          Saya membangun web yang cepat dan mudah digunakan.
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg text-slate-600">
+          Fokus pada sistem informasi dan aplikasi web untuk institusi dan
+          bisnis.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="#proyek"
+            class="rounded-lg bg-brand-600 px-6 py-3 text-center font-semibold text-white transition hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+          >
+            Lihat Proyek
+          </a>
+          <a
+            href="#kontak"
+            class="rounded-lg border border-slate-300 px-6 py-3 text-center font-semibold text-slate-700 transition hover:bg-slate-50"
+          >
+            Hubungi Saya
+          </a>
+        </div>
+      </section>
+
+      <section id="tentang"><!-- Tentang --></section>
+
+      <section id="proyek"><!-- Proyek --></section>
+
+      <section id="kontak"><!-- Kontak --></section>
+    </main>
+
+    <footer><!-- Footer --></footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
